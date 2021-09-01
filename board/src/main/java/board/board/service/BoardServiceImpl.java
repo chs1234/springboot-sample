@@ -9,6 +9,7 @@ import board.board.dto.BoardDto;
 import board.board.mapper.BoardMapper;
 
 @Service
+//@Transactional
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
@@ -27,7 +28,6 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public BoardDto selectBoardDetail(int boardIdx) throws Exception {
 		boardMapper.updateHitCount(boardIdx);
-		
 		return boardMapper.selectBoardDetail(boardIdx);
 	}
 
