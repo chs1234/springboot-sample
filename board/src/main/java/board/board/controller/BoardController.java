@@ -21,7 +21,7 @@ import board.board.service.BoardService;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-//@Controller
+@Controller
 public class BoardController {
 	
 	@Autowired
