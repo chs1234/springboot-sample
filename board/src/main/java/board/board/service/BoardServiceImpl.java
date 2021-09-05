@@ -32,26 +32,6 @@ public class BoardServiceImpl implements BoardService {
 		List<BoardFileDto> list = fileUtils.parseFileInfo(board.getBoardIdx(), multipartHttpServletRequest);
 		if (CollectionUtils.isEmpty(list) == false)
 			boardMapper.insertBoardFileList(list);
-		
-//		log test
-//		if (ObjectUtils.isEmpty(multipartHttpServletRequest) == false) {
-//			Iterator<String> iterator = multipartHttpServletRequest.getFileNames();
-//			String name;
-//			
-//			while (iterator.hasNext()) {
-//				name = iterator.next();
-//				log.debug("file tag name: " + name);
-//				
-//				List<MultipartFile> list = multipartHttpServletRequest.getFiles(name);
-//				for (MultipartFile multipartFile : list) {
-//					log.debug("================ start file information ================");
-//					log.debug("file name: " + multipartFile.getOriginalFilename());
-//					log.debug("file size: " + multipartFile.getSize());
-//					log.debug("file content type: " + multipartFile.getContentType());
-//					log.debug("================ end file information. ================ \n");
-//				}
-//			}
-//		}
 	}
 
 	@Override
